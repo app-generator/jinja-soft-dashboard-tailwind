@@ -3,7 +3,9 @@
     "version": "1.0.2",
     "description": "",
     "scripts": {
-        "build": "tailwindcss build -i src/styles.css -o build/assets/css/styles.css"
+        "build": "npm run css && npm run min-css",
+        "css": "tailwindcss build -i scss/styles.css -o css/styles.css",
+        "min-css": "css-minify -d css -o css"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.2",
@@ -13,6 +15,7 @@
     },
     "dependencies": {
         "cli": "^1.0.1",
+        "css-minify": "^2.0.0",
         "highlight.js": "^11.4.0",
         "tailwindcss-transforms": "^2.2.0"
     }
