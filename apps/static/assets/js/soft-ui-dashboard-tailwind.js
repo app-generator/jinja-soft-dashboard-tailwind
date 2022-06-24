@@ -23,29 +23,29 @@ if (!aux.includes("pages")) {
   page = "dashboard";
 }
 
-loadStylesheet(to_build + "assets/css/perfect-scrollbar.css");
-loadJS(to_build + "assets/js/perfect-scrollbar.js", true);
+loadStylesheet(to_build + "static/assets/css/perfect-scrollbar.css");
+loadJS(to_build + "static/assets/js/perfect-scrollbar.js", true);
 
 if (page != "sign-in" && page != "sign-up") {
-  loadJS(to_build + "assets/js/fixed-plugin.js", true);
-  loadJS(to_build + "assets/js/sidenav-burger.js", true);
-  loadJS(to_build + "assets/js/dropdown.js", true);
+  loadJS(to_build + "static/assets/js/fixed-plugin.js", true);
+  loadJS(to_build + "static/assets/js/sidenav-burger.js", true);
+  loadJS(to_build + "static/assets/js/dropdown.js", true);
   if (page != "profile") {
-    loadJS(to_build + "assets/js/navbar-sticky.js", true);
+    loadJS(to_build + "static/assets/js/navbar-sticky.js", true);
   } else {
-    loadJS(to_build + "assets/js/nav-pills.js", true);
+    loadJS(to_build + "static/assets/js/nav-pills.js", true);
   }
   if (page != "tables") {
-    loadJS(to_build + "assets/js/tooltips.js", true);
-    loadStylesheet(to_build + "assets/css/tooltips.css");
+    loadJS(to_build + "static/assets/js/tooltips.js", true);
+    loadStylesheet(to_build + "static/assets/css/tooltips.css");
   }
 } else {
-  loadJS(to_build + "assets/js/navbar-collapse.js", true);
+  loadJS(to_build + "static/assets/js/navbar-collapse.js", true);
 }
 
 if (document.querySelector("canvas")) {
-  loadJS(to_build + "assets/js/chart-1.js", true);
-  loadJS(to_build + "assets/js/chart-2.js", true);
+  loadJS(to_build + "static/assets/js/chart-1.js", true);
+  loadJS(to_build + "static/assets/js/chart-2.js", true);
 }
 
 function loadJS(FILE_URL, async) {
